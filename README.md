@@ -6,3 +6,5 @@ DWL is a compact, hackable compositor for Wayland based on wlroots. It is intend
 - Easy to understand, hack on, and extend with patches
 * One C source file (or a very small number) configurable via config.h
 + Tied to as few external dependencies as possible
+
+After 15-20 years on i3 it was time to migrate to a Wayland compositor.  I always loved the suckless  philosophy and that's why I picked DWL.
