@@ -43,7 +43,7 @@ mako &
 waybar &
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=wlroots
 ```
-I use SDDM as a display manager.  In your ~/.local/src/dwl folder there should be a file called dwl.desktop.  During compilation this will be copied to /usr/local/share/wayland-sessions/dwl.desktop.  Make sure it looks like this:
+I use SDDM as a display manager.  In your ~/.local/src/dwl folder there should be a file called dwl.desktop.  During sudo make install clean this will be copied to /usr/local/share/wayland-sessions/dwl.desktop.  Make sure it looks like this to contain the dwl-startup.sh script.  The -s is the startup argument of dwl.
 ```
 [Desktop Entry]
 Name=dwl
@@ -51,3 +51,39 @@ Comment=dwm for Wayland
 Exec=dwl -s ~/.local/dwl-startup.sh
 Type=Application
 ```
+
+## Terminal, application launcher and bar
+As a terminal I use Kitty with background_opacity 0.7.  Zsh is my default shell and I'm a huge fan of the powerlevel10k zsh theme: https://aur.archlinux.org/packages/zsh-theme-powerlevel10k.
+In i3 I've used rofi the longest time and I switched to wofi now.  I honestly don't even rememeber where I got the theme from but it's included in the repository as well.
+The menubar is Waybar.  Because my DWL is IPC patched and Waybar's config has been modified for DWL I'm able to use actually use the tags.  It's a fairly default Waybar config except I changed the colors to blue.  This is less distracting in my opinion.
+
+## Keyboard hacks for be-latin1 (Belgian AZERTY layout)
+Being Belgian I'm using a be-latin1 AZERTY keyboard layout.  This is always a mess to change tags.  After some fiddling with 'wev' I was able to modify the necessary keys and use SHIFT+& for tag 1, SHIFT+é for tag 2, SHIFT+" for tag 3 etc.
+In config.h:
+```
+/* keyboard */
+static const struct xkb_rule_names xkb_rules = {
+        /* can specify fields: rules, model, layout, variant, options */
+        /* example:
+        .options = "ctrl:nocaps",
+        */
+        .layout = "be",
+};
+```
+and also
+```
+        TAGKEYS(          XKB_KEY_ampersand, XKB_KEY_1,                     0),
+        TAGKEYS(          XKB_KEY_eacute, XKB_KEY_2,                         1),
+        TAGKEYS(          XKB_KEY_quotedbl, XKB_KEY_3,                 2),
+        TAGKEYS(          XKB_KEY_apostrophe, XKB_KEY_dollar,                     3),
+        TAGKEYS(          XKB_KEY_parenleft, XKB_KEY_percent,                    4),
+        TAGKEYS(          XKB_KEY_section, XKB_KEY_asciicircum,                5),
+        TAGKEYS(          XKB_KEY_egrave, XKB_KEY_ampersand,                  6),
+        TAGKEYS(          XKB_KEY_exclam, XKB_KEY_asterisk,                   7),
+        TAGKEYS(          XKB_KEY_ccedilla, XKB_KEY_parenleft,                  8),
+```
+Enjoy fellow Belgians :)
+
+## Screenshots
+I know everyone scrolls immediately to see the screenshots.
+
