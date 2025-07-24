@@ -26,7 +26,7 @@ DWL's configuration can be adapted by changing config.h and config.mk files in t
 
 ## DWL's startup script
 I'm well aware that an autostart patch exist for DWL but I prefer to use a startup script.  I put it it ~/.local/dwl-startup.sh and it it contains:
-
+```
 #!/bin/bash
 
 # Kill already running dublicate process
@@ -41,5 +41,5 @@ for _prs in $_ps; do
 swaybg --image ~/Pictures/flowers_night_blue_hd_fantasy_landscape.jpg &
 mako &
 waybar &
-# foot --server &
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=wlroots
+```
