@@ -19,7 +19,7 @@ DWL, by default, is very spartan.  But its functionalities can be extended with 
 * ipc.patch from https://codeberg.org/dwl/dwl-patches/src/branch/main/patches/ipc because this provides an ipc for wayland clients to get and set DWL state. The ipc is intended for status bars like Waybar like I'm using.
 
 ## How to patch
-From ~/.local/src/dwl folder, enter the command: patch -p1 < /path/to/filename.patch.  Then make and finally sudo make install clean.  Login in DWL again to see the changes.
+From the ~/.local/src/dwl folder, enter the command: patch -p1 < /path/to/filename.patch.  Then make and finally sudo make install clean.  Login in DWL again to see the changes.
 
 ## DWL config modifications
 DWL's configuration can be adapted by changing config.h and config.mk files in the ~/.local/src/dwl folder.  
