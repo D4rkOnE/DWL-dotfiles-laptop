@@ -43,6 +43,7 @@ mako &
 waybar &
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=wlroots
 ```
+As you can see swaybg is used to set the wallpaper.  I included a few wallpapers in this repository which I like a lot. 
 I use SDDM as a display manager.  In your ~/.local/src/dwl folder there should be a file called dwl.desktop.  During sudo make install clean this will be copied to /usr/local/share/wayland-sessions/dwl.desktop.  Make sure it looks like this to contain the dwl-startup.sh script.  The -s is the startup argument of dwl.
 ```
 [Desktop Entry]
