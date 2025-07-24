@@ -1,6 +1,6 @@
 # Welcome to the .dotfiles of my Archlinux DWL setup
 
-After 15 years on i3 it was time to migrate to a Wayland compositor.  I always loved the suckless  philosophy and that's why I chose DWL.
+After 15 years on i3 it was time to migrate to a Wayland compositor.  I always loved the suckless  philosophy and that's why I chose DWL.  I decided to rice DWL and go for an overall blue theme.  Hello to #dwl on Libera :)
 
 ## What is DWL?
 DWL is a compact, hackable compositor for Wayland based on wlroots. It is intended to fill the same space in the Wayland world that dwm does in X11, primarily in terms of functionality, and secondarily in terms of philosophy. Like DWM, DWL is:
