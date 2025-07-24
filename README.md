@@ -10,7 +10,7 @@ DWL is a compact, hackable compositor for Wayland based on wlroots. It is intend
 * Tied to as few external dependencies as possible
 
 ## How to install in Archlinux
-Install a minimal version of Archlinux.  Git clone https://codeberg.org/dwl/dwl to your ~/.local/src folder.  Make && sudo make install clean.
+Install a minimal version of Archlinux.  Git clone https://codeberg.org/dwl/dwl to your ~/.local/src folder.  Make && sudo make install clean.  All my installed packages can be found in pacman.txt.
 
 ## Patches
 DWL, by default, is very spartan.  But its functionalities can be extended with the patches from https://codeberg.org/dwl/dwl-patches.  I only applied the following patches:
