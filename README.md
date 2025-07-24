@@ -43,3 +43,11 @@ mako &
 waybar &
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=wlroots
 ```
+I use SDDM as a display manager.  In your ~/.local/src/dwl folder there should be a file called dwl.desktop.  During compilation this will be copied to /usr/local/share/wayland-sessions/dwl.desktop.  Make sure it looks like this:
+```
+[Desktop Entry]
+Name=dwl
+Comment=dwm for Wayland
+Exec=dwl -s ~/.local/dwl-startup.sh
+Type=Application
+```
