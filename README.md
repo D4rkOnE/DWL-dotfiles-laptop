@@ -23,3 +23,6 @@ From the ~/.local/src/dwl folder, enter the command: patch -p1 < /path/to/filena
 
 ## DWL config modifications
 DWL's configuration can be adapted by changing config.h and config.mk files in the ~/.local/src/dwl folder.  
+
+## DWL's startup script
+
