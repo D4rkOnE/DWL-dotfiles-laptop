@@ -1,4 +1,4 @@
-# My DWL's configuration on my laptop
+# Welcome to the .dotfiles of my Archlinux DWL setup
 
 ## What is DWL?
 DWL is a compact, hackable compositor for Wayland based on wlroots. It is intended to fill the same space in the Wayland world that dwm does in X11, primarily in terms of functionality, and secondarily in terms of philosophy. Like DWM, DWL is:
