@@ -88,4 +88,9 @@ Enjoy fellow Belgians :)
 
 ## Screenshots
 I know everyone scrolls immediately to see the screenshots.
+Clean:
+(https://github.com/himselfish/DWL-dotfiles-laptop/blob/main/clean.png)
+
+Fake busy:
+(https://github.com/himselfish/DWL-dotfiles-laptop/blob/main/busy.png)
 
