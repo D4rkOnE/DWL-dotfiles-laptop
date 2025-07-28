@@ -110,7 +110,7 @@ static const char *suspendcmd[] = { "systemctl", "suspend", NULL};
         { MODKEY|WLR_MODIFIER_CTRL,  XKB_KEY_s,          spawn,          {.v = suspendcmd} },
 ```
 ### SDDM theme
-A goodlooking matching SDDM was found on https://github.com/sniper1720/elegant-sddm-archlinux-theme.  Git clone it, save it to /usr/share/sddm/themes/elegant-archlinux.  Copy /usr/lib/sddm/sddm.conf.d/default.conf to /etc/sddm.conf and change it to;
+A goodlooking matching SDDM was found on https://github.com/sniper1720/elegant-sddm-archlinux-theme.  Git clone it, save it to /usr/share/sddm/themes/elegant-archlinux.  Copy /usr/lib/sddm/sddm.conf.d/default.conf to /etc/sddm.conf and change it to
 ```
 [Theme]
 Current=elegant-archlinux
