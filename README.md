@@ -89,11 +89,26 @@ Enjoy fellow Belgians :)
 
 ## Lockscreen configuration, shutdown monitor and suspend.
 ### Lockscreen
-I'm using a combination of swayidle and swaylock for this.  Install the following packages: swayidle, swaylock-effects-git (from AUR) and wlr-randr. My dwl-startup.sh script contains the following line: ```swayidle -w timeout 300 'swaylock --screenshots --clock --effect-blur 7x5 -f' &```.  This means that swayidle will launch swaylock after 5min by showing a blurred version of my then-current workspace.  The blurred screenshot version of swaylock is part of swaylock-effects-git.
+I'm using a combination of swayidle and swaylock for this.  Install the following packages: swayidle, swaylock-effects-git (from AUR) and wlr-randr. My dwl-startup.sh script contains the following line: ```swayidle -w timeout 300 'swaylock --screenshots --clock --effect-blur 7x5 -f' &```.  This means that swayidle will launch swaylock after 5min (= 300 secs) by showing a blurred version of my then-current workspace.  The blurred screenshot version of swaylock is part of swaylock-effects-git.
+CTRL+ALT+L will immediately lock the screen.
+```
+static const char *lockcmd[] = { "swaylock", "--screenshots", "--clock", "--effect-blur", "7x5", "-f", NULL };
+        { WLR_MODIFIER_CTRL|WLR_MODIFIER_ALT,            XKB_KEY_l,          spawn,          {.v = lockcmd} },
+```
 ### Shutdown monitor
-The wlr-randr command is used as a keyboard shortcut to shutdown the monitor.  
-
+The wlr-randr command is used as a keyboard shortcut to shutdown the monitor.  The general syntax is: wlr-randr --output <display> --off/--on.
+```
+static const char *screenoncmd[] = { "wlr-randr", "--output", "eDP-1", "--on", NULL};
+static const char *screenoffcmd[] = { "wlr-randr", "--output", "eDP-1", "--off", NULL};
+        { MODKEY|WLR_MODIFIER_CTRL,  XKB_KEY_o,          spawn,          {.v = screenoncmd} },
+        { MODKEY|WLR_MODIFIER_CTRL,  XKB_KEY_a,          spawn,          {.v = screenoffcmd} },
+```
 ### Suspend laptop
+Very simple, this can be achieved by using systemctl suspend.
+```
+static const char *suspendcmd[] = { "systemctl", "suspend", NULL};
+        { MODKEY|WLR_MODIFIER_CTRL,  XKB_KEY_s,          spawn,          {.v = suspendcmd} },
+```
 
 ## Screenshots
 I know everyone scrolls immediately to see the screenshots.
