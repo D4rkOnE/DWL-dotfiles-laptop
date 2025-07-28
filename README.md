@@ -38,7 +38,7 @@ for _prs in $_ps; do
  done
 
 # Start our applications
-swaybg --image /home/dark/Pictures/flowers_night_blue_hd_fantasy_landscape.jpg &
+swaybg --image ~/Pictures/flowers_night_blue_hd_fantasy_landscape.jpg &
 mako &
 waybar &
 swayidle -w timeout 300 'swaylock --screenshots --clock --effect-blur 7x5 -f' &
