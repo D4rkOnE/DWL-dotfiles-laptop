@@ -114,7 +114,7 @@ A goodlooking matching SDDM was found on https://github.com/sniper1720/elegant-s
 ```
 [Theme]
 Current=elegant-archlinux
-``
+```
 
 ## Screenshots
 I know everyone scrolls immediately to see the screenshots.
