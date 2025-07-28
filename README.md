@@ -96,7 +96,7 @@ static const char *lockcmd[] = { "swaylock", "--screenshots", "--clock", "--effe
         { WLR_MODIFIER_CTRL|WLR_MODIFIER_ALT,            XKB_KEY_l,          spawn,          {.v = lockcmd} },
 ```
 ### Shutdown monitor
-The wlr-randr command is used as a keyboard shortcut to shutdown the monitor.  The general syntax is: wlr-randr --output <display> --off/--on.
+The wlr-randr command is used as a keyboard shortcut to shutdown the monitor.  The general syntax is: wlr-randr --output DISPLAY --off/--on.
 ```
 static const char *screenoncmd[] = { "wlr-randr", "--output", "eDP-1", "--on", NULL};
 static const char *screenoffcmd[] = { "wlr-randr", "--output", "eDP-1", "--off", NULL};
