@@ -86,8 +86,12 @@ and also
 ```
 Enjoy fellow Belgians :)
 
-## Lockscreen configuration
-I'm using a combination of swayidle and swaylock for this.  Install the following packages: swayidle, swaylock-effects-git (from AUR) and wlr-randr. My dwl-startup.sh script contains the following line: ```swayidle -w timeout 300 'swaylock --screenshots --clock --effect-blur 7x5 -f' &```.  This means that swayidle will launch swaylock after 5min by showing a blurred version of my then-current workspace.  The wlr-randr command is used as a keyboard shortcut to shutdown the monitor.  There
+## Lockscreen configuration, shutdown monitor and suspend.
+### Lockscreen
+I'm using a combination of swayidle and swaylock for this.  Install the following packages: swayidle, swaylock-effects-git (from AUR) and wlr-randr. My dwl-startup.sh script contains the following line: ```swayidle -w timeout 300 'swaylock --screenshots --clock --effect-blur 7x5 -f' &```.  This means that swayidle will launch swaylock after 5min by showing a blurred version of my then-current workspace.  
+### Shutdown monitor
+The wlr-randr command is used as a keyboard shortcut to shutdown the monitor. 
+### Suspend laptop
 
 ## Screenshots
 I know everyone scrolls immediately to see the screenshots.
