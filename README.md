@@ -116,6 +116,9 @@ A goodlooking matching SDDM was found on https://github.com/sniper1720/elegant-s
 Current=elegant-archlinux
 ```
 
+### Neovim
+There are many good neovim tutorials out there.  I'm using the following plugins: Lazyvim, nvim-telescope, nvim-treesitter.  https://dev.to/zt4ff_1/effective-neovim-setup-a-beginners-guide-1i81 is a wonderful guide to get you started.
+
 ## Screenshots
 I know everyone scrolls immediately to see the screenshots.
 Clean:
