@@ -124,3 +124,8 @@ Clean:
 Fake busy:
 ![Fake busy screenshot](https://github.com/himselfish/DWL-dotfiles-laptop/blob/main/busy.png)
 
+Fake busy:
+![Fake busy screenshot]
+
+
+
