@@ -41,8 +41,9 @@ for _prs in $_ps; do
 
 # Start our applications
 swaybg --image ~/Pictures/flowers_night_blue_hd_fantasy_landscape.jpg &
-mako &
+mako -c ~/.config/mako/config &
 waybar &
+udiskie --tray &
 swayidle -w timeout 300 'swaylock --screenshots --clock --effect-blur 7x5 -f' &
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=wlroots
 ```
