@@ -63,7 +63,7 @@ My favorite file manager is Thunar.  I'm a fan of aur/arc-gtk-theme which integr
 The menubar is Waybar.  Because my DWL is IPC patched and Waybar's config has been modified for DWL I'm able to use actually use the tags.  It's a fairly default Waybar config except I changed the colors to blue.  This is less distracting in my opinion.
 
 ## Auto-mount USB devices like external hard drives
-I prefer my USB connected external hard drives to be mounted automatically. For this I installed udisks2 which is then enabled at boot via ```systemctl enable --now udisks2.service```. As for automount I prefer udiskie which is autostarted with udiskie --tray & in my dwl-startup.sh script.
+I prefer my USB connected external hard drives to be mounted automatically. For this I installed udisks2 which is then enabled at boot via ```systemctl enable --now udisks2.service```. As for automount I installed udiskie which is autostarted with ```udiskie --tray &``` in my dwl-startup.sh script.
 
 ## Keyboard hacks for be-latin1 (Belgian AZERTY layout)
 Being Belgian I'm using a be-latin1 AZERTY keyboard layout.  This is always a mess to change tags.  After some fiddling with 'wev' I was able to modify the necessary keys and use SHIFT+& for tag 1, SHIFT+é for tag 2, SHIFT+" for tag 3 etc.
