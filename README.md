@@ -25,7 +25,7 @@ From the ~/.local/src/dwl folder, enter the command: patch -p1 < /path/to/filena
 DWL's configuration can be adapted by changing config.h and config.mk files in the ~/.local/src/dwl folder.  Modifying the C-code can be challenging to begin with. My changes and all keybinds are included in dotfiles.tar.
 
 ## DWL's startup script
-I'm well aware that an autostart patch exist for DWL but I prefer to use a startup script.  I put it it ~/.local/dwl-startup.sh and it it contains:
+I'm well aware that an autostart patch exist for DWL but I prefer to use a startup script.  I put it in ~/.local/dwl-startup.sh and it contains:
 ```
 #!/bin/bash
 
