@@ -89,7 +89,7 @@ Enjoy fellow Belgians :)
 
 ## Lockscreen configuration, shutdown monitor and suspend.
 ### Lockscreen
-I'm using a combination of swayidle and swaylock for this.  Install the following packages: swayidle, swaylock-effects-git (from AUR) and wlr-randr. My dwl-startup.sh script contains the following line: ```swayidle -w timeout 300 'swaylock --screenshots --clock --effect-blur 7x5 -f' &```.  This means that swayidle will launch swaylock after 5min (= 300 secs) by showing a blurred version of my then-current workspace.  The blurred screenshot version of swaylock is part of swaylock-effects-git.
+I'm using a combination of swayidle and swaylock for this.  Install the following packages: swayidle, swaylock-effects-git (from AUR) and wlr-randr. My dwl-startup.sh script contains the following line: ```swayidle -w timeout 300 'swaylock --screenshots --clock --effect-blur 7x5 -f' &```.  This means that swayidle will launch swaylock after 5min (= 300 secs) by showing a blurred version of my then-current workspace.  The blurred screenshot version of swaylock is part of swaylock-effects-git.  Swaylock installed through pacman does not have the screenshots functionality.  
 CTRL+ALT+L will immediately lock the screen.
 ```
 static const char *lockcmd[] = { "swaylock", "--screenshots", "--clock", "--effect-blur", "7x5", "-f", NULL };
