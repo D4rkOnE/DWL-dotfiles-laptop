@@ -87,7 +87,7 @@ and also
 ```
 Enjoy fellow Belgians :)
 
-## Lockscreen configuration, shutdown monitor and suspend.
+## Lockscreen configuration, shutdown monitor, hibernate and suspend.
 ### Lockscreen
 I'm using a combination of swayidle and swaylock for this.  Install the following packages: swayidle, swaylock-effects-git (from AUR) and wlr-randr. My dwl-startup.sh script contains the following line: ```swayidle -w timeout 300 'swaylock --screenshots --clock --effect-blur 7x5 -f' &```.  This means that swayidle will launch swaylock after 5min (= 300 secs) by showing a blurred version of my then-current workspace.  The blurred screenshot version of swaylock is part of swaylock-effects-git.  Swaylock installed through pacman does not have the screenshots functionality.  
 CTRL+ALT+L will immediately lock the screen.
@@ -103,8 +103,11 @@ static const char *screenoffcmd[] = { "wlr-randr", "--output", "eDP-1", "--off",
         { MODKEY|WLR_MODIFIER_CTRL,  XKB_KEY_o,          spawn,          {.v = screenoncmd} },
         { MODKEY|WLR_MODIFIER_CTRL,  XKB_KEY_a,          spawn,          {.v = screenoffcmd} },
 ```
+### Hibernate
+Hibernation requires some manuel work.  First of all, create a large swap file.  I'm using BTRFS so it's easy: ```btrfs filesystem mkswapfile --size 16g --uuid clear /swap/swapfile```.  Then ```swapon /swap/swapfile```.  Add the following line to /etc/fstab: ```/swap/swapfile none swap defaults 0 0```.  Reboot now and see if your 16 GB swap is active after reboot.  Now the initramfs needs modifications as well.  Edit file /etc/mkinitcpio.conf and look for ths HOOKS line.  It should look like HOOKS=(base udev ...).  Add the word ```resume``` between brackets so it looks like this: HOOKS=(base udev ... resume).  Now regenerate your initramfs by entering ```mkinitcpio -P```.  Reboot again and see if ```systemctl hibernate``` works.  
+
 ### Suspend laptop
-Very simple, this can be achieved by using systemctl suspend.
+Very simple, this can be achieved by using ```systemctl suspend``` and should work out of the box.
 ```
 static const char *suspendcmd[] = { "systemctl", "suspend", NULL};
         { MODKEY|WLR_MODIFIER_CTRL,  XKB_KEY_s,          spawn,          {.v = suspendcmd} },
