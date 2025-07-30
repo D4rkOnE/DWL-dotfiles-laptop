@@ -1,6 +1,3 @@
-To do: 
-- auto resume wifi after hibernation
-
 # Welcome to the .dotfiles of my Archlinux DWL setup
 
 After 15 years on i3 it was time to migrate to a Wayland compositor.  I always loved the suckless  philosophy and that's why I chose DWL.  I decided to rice DWL and go for an overall blue theme.  Hello to #dwl on irc.libera.chat :)
@@ -155,7 +152,7 @@ Hibernation requires some manuel work.  First of all, create a large swap file. 
 static const char *hibernatecmd[] = { "systemctl", "hibernate", NULL};
         { MODKEY|WLR_MODIFIER_CTRL,  XKB_KEY_h,          spawn,          {.v = hibernatecmd} },
 ```
-I'm happy to report that all hardware, incl wifi, is able to resume after hibernation.  This was a lot messier 10-15 years ago in Linux. 
+I'm happy to report that all hardware, including wifi, is able to resume after hibernation.  This was a lot messier 10-15 years ago in Linux. 
 
 ### Suspend
 Very simple, this can be achieved by using ```systemctl suspend``` and should work out of the box.
