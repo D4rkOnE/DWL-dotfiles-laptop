@@ -66,6 +66,16 @@ My favorite file manager is Thunar.  I'm a fan of aur/arc-gtk-theme which integr
 
 The menubar is Waybar.  Because my DWL is IPC patched and Waybar's config has been modified for DWL I'm able to use actually use the tags.  It's a fairly default Waybar config except I changed the colors to blue.  This is less distracting in my opinion.
 
+## Screenshot tool
+I installed sway-screenshots to be able to make screenshots.
+```
+static const char *ssoutputcmd[] = { "sway-screenshot", "-m", "output", "-o", "Pictures/screenshots", NULL };  /* screenshot of full screen */
+static const char *ssselectioncmd[] = { "sway-screenshot", "-m", "region", "-o", "Pictures/screenshots", NULL }; /* screenshot of selection */
+        { MODKEY,                    XKB_KEY_Print,      spawn,          {.v = ssoutputcmd} },
+        { MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_Print,      spawn,          {.v = ssselectioncmd} },
+```
+Pressing MODKEY + PrtSc gives me a screenshot of my entire screen.  MODKEY + SHIFT + PrtSc allows me to select a region on my screen using the mouse.  Screenshots are saved to my ~/Pictures/screenshots folder.
+
 ## Auto-mount USB devices like external hard drives
 I prefer my USB connected external hard drives to be mounted automatically. For this I installed udisks2 which is then enabled at boot via ```systemctl enable --now udisks2.service```. As for automount I installed udiskie which is autostarted with ```udiskie --tray &``` in my dwl-startup.sh script.  External USB devices will now be auto-mounted and accessible via Thunar.
 
