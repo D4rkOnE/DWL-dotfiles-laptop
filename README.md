@@ -1,4 +1,4 @@
-To do: document 
+To do: 
 - auto resume wifi after hibernation
 
 # Welcome to the .dotfiles of my Archlinux DWL setup
