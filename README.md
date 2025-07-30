@@ -155,6 +155,7 @@ Hibernation requires some manuel work.  First of all, create a large swap file. 
 static const char *hibernatecmd[] = { "systemctl", "hibernate", NULL};
         { MODKEY|WLR_MODIFIER_CTRL,  XKB_KEY_h,          spawn,          {.v = hibernatecmd} },
 ```
+I'm happy to report that all hardware, incl wifi, is able to resume after hibernation.  This was a lot messier 10-15 years ago in Linux. 
 
 ### Suspend
 Very simple, this can be achieved by using ```systemctl suspend``` and should work out of the box.
