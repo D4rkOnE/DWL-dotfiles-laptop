@@ -48,6 +48,10 @@ swaybg --image ~/Pictures/flowers_night_blue_hd_fantasy_landscape.jpg &
 mako -c ~/.config/mako/config &
 waybar &
 udiskie --tray &
+nm-applet --indicator &
+wl-clip-persist --clipboard regular &
+wl-paste --type text --watch cliphist store &
+wl-paste --type image --watch cliphist store &
 swayidle -w timeout 300 'swaylock --screenshots --clock --effect-blur 7x5 -f' &
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=wlroots
 ```
