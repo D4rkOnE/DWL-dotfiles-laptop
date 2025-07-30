@@ -72,6 +72,16 @@ My favorite file manager is Thunar.  I'm a fan of aur/arc-gtk-theme which integr
 
 The menubar is Waybar.  Because my DWL is IPC patched and Waybar's config has been modified for DWL I'm able to use actually use the tags.  It's a fairly default Waybar config except I changed the colors to blue.  This is less distracting in my opinion.
 
+## NetworkManager and nm-applet
+Taking my laptop to work, home, hotels etc it's fun to easy switch between wifi networks.  I installed NetworkManager and enabled it with ```systemctl enable --now NetworkManager```.  Then I installed nm-applet and added ```nm-applet --indicator &``` to my dwl-startup.sh.  It adds a tiny networking applet in the tray section of Waybar and allows you to switch wifi networks easily.
+
+## Wayland clipboard tool
+I installed wl-clip-persist.  That installs 2 binaries: wl-paste and wl-clip-persist.  The following were added to my dwl-startup.sh file:
+```
+wl-clip-persist --clipboard regular &
+wl-paste --type text --watch cliphist store &
+wl-paste --type image --watch cliphist store &
+``` 
 ## Screenshot tool
 I installed sway-screenshots to be able to make screenshots.
 ```
