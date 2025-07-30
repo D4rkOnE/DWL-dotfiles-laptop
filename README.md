@@ -3,7 +3,7 @@ To do: document
 ```wl-paste --type text --watch cliphist store &```
 ```wl-paste --type image --watch cliphist store &```
 ```nm-applet --indicator```
-
+https://codeberg.org/dwl/dwl-patches/src/branch/main/patches/dim-unfocused
 
 # Welcome to the .dotfiles of my Archlinux DWL setup
 
