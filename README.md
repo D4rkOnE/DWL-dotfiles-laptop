@@ -1,3 +1,7 @@
+To do: document wl-clip-persist --clipboard regular &
+wl-paste --type text --watch cliphist store &
+wl-paste --type image --watch cliphist store &
+
 # Welcome to the .dotfiles of my Archlinux DWL setup
 
 After 15 years on i3 it was time to migrate to a Wayland compositor.  I always loved the suckless  philosophy and that's why I chose DWL.  I decided to rice DWL and go for an overall blue theme.  Hello to #dwl on irc.libera.chat :)
