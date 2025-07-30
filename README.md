@@ -56,9 +56,14 @@ Type=Application
 ```
 
 ## Terminal, application launcher, file manager and bar
-As a terminal I use Kitty with background_opacity 0.7.  Zsh is my default shell and I'm a huge fan of the powerlevel10k zsh theme: https://aur.archlinux.org/packages/zsh-theme-powerlevel10k.
+As a terminal I use Kitty with background_opacity 0.7.  
+
+Zsh is my default shell and I'm a huge fan of the powerlevel10k zsh theme: https://aur.archlinux.org/packages/zsh-theme-powerlevel10k.
+
 In i3 I've used rofi the longest time and I switched to wofi now.  The nord theme from https://github.com/joao-vitor-sr/wofi-themes-collection is used.
+
 My favorite file manager is Thunar.  I'm a fan of aur/arc-gtk-theme which integrates well into this overall blue themed DWL.
+
 The menubar is Waybar.  Because my DWL is IPC patched and Waybar's config has been modified for DWL I'm able to use actually use the tags.  It's a fairly default Waybar config except I changed the colors to blue.  This is less distracting in my opinion.
 
 ## Auto-mount USB devices like external hard drives
