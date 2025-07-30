@@ -2,6 +2,8 @@ To do: document
 ```wl-clip-persist --clipboard regular &```
 ```wl-paste --type text --watch cliphist store &```
 ```wl-paste --type image --watch cliphist store &```
+```nm-applet --indicator```
+
 
 # Welcome to the .dotfiles of my Archlinux DWL setup
 
