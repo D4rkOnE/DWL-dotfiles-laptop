@@ -1,6 +1,6 @@
-To do: document wl-clip-persist --clipboard regular &
+To do: document ```wl-clip-persist --clipboard regular &
 wl-paste --type text --watch cliphist store &
-wl-paste --type image --watch cliphist store &
+wl-paste --type image --watch cliphist store &```
 
 # Welcome to the .dotfiles of my Archlinux DWL setup
 
