@@ -1,9 +1,9 @@
 To do: document 
-```wl-clip-persist --clipboard regular &```
-```wl-paste --type text --watch cliphist store &```
-```wl-paste --type image --watch cliphist store &```
-```nm-applet --indicator``` + ```systemctl enable --now NetworkManager``` + add nm-applet --indicator & to dwl-startup.sh
-https://codeberg.org/dwl/dwl-patches/src/branch/main/patches/dim-unfocused
+- ```wl-clip-persist --clipboard regular &```
+- ```wl-paste --type text --watch cliphist store &```
+- ```wl-paste --type image --watch cliphist store &```
+- ```nm-applet --indicator``` + ```systemctl enable --now NetworkManager``` + add nm-applet --indicator & to dwl-startup.sh
+- https://codeberg.org/dwl/dwl-patches/src/branch/main/patches/dim-unfocused
 
 # Welcome to the .dotfiles of my Archlinux DWL setup
 
