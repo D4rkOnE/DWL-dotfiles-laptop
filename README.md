@@ -147,7 +147,10 @@ static const char *screenoffcmd[] = { "wlr-randr", "--output", "eDP-1", "--off",
         { MODKEY|WLR_MODIFIER_CTRL,  XKB_KEY_a,          spawn,          {.v = screenoffcmd} },
 ```
 ### Hibernate
-Hibernation requires some manuel work.  First of all, create a large swap file.  I'm using BTRFS so it's easy: ```btrfs filesystem mkswapfile --size 16g --uuid clear /swap/swapfile```.  Then ```swapon /swap/swapfile```.  Add the following line to /etc/fstab: ```/swap/swapfile none swap defaults 0 0```.  Reboot now and see if your 16 GB swap is active after reboot.  Now the initramfs needs modifications as well.  Edit file /etc/mkinitcpio.conf and look for the HOOKS line.  It should look like HOOKS=(base udev ...).  Add the word ```resume``` between brackets so it looks like this: HOOKS=(base udev ... resume).  Now regenerate your initramfs by entering ```mkinitcpio -P```.  Reboot again and see if ```systemctl hibernate``` works.  
+Hibernation requires some manuel work.  First of all, create a large swap file.  I'm using BTRFS so it's easy: ```btrfs filesystem mkswapfile --size 16g --uuid clear /swap/swapfile```.  Then ```swapon /swap/swapfile```.  
+Add the following line to /etc/fstab: ```/swap/swapfile none swap defaults 0 0```.  Reboot now and see if your 16 GB swap is active after reboot.  
+Now the initramfs needs modifications as well.  Edit file /etc/mkinitcpio.conf and look for the HOOKS line.  It should look like HOOKS=(base udev ...).  Add the word ```resume``` between brackets so it looks like this: HOOKS=(base udev ... resume).  
+Now regenerate your initramfs by entering ```mkinitcpio -P```.  Reboot again and see if ```systemctl hibernate``` works.  
 ``` 
 static const char *hibernatecmd[] = { "systemctl", "hibernate", NULL};
         { MODKEY|WLR_MODIFIER_CTRL,  XKB_KEY_h,          spawn,          {.v = hibernatecmd} },
