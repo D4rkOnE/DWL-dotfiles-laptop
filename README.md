@@ -26,7 +26,7 @@ You can check beforehand with patch -p1 --dry-run < /path/to/filename.patch.
 DWL's configuration can be adapted by changing config.h and config.mk files in the ~/.local/src/dwl folder.  Modifying the C-code can be challenging to begin with. My changes and all keybinds are included in dotfiles.tar.
 
 ## DWL's startup script
-I'm well aware that an [autostart(https://codeberg.org/dwl/dwl-patches/src/branch/main/patches/autostart)] patch exists for DWL but I prefer to use a startup script.  I put it in ~/.local/dwl-startup.sh and it contains:
+I'm well aware that an [autostart](https://codeberg.org/dwl/dwl-patches/src/branch/main/patches/autostart) patch exists for DWL but I prefer to use a startup script.  I put it in ~/.local/dwl-startup.sh and it contains:
 ```
 #!/bin/bash
 
