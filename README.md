@@ -20,6 +20,7 @@ DWL, by default, is very spartan.  But its functionalities can be extended with 
 
 ## How to patch
 From the ~/.local/src/dwl folder, enter the command: patch -p1 < /path/to/filename.patch.  Then make and finally sudo make install clean.  Login in DWL again to see the changes.
+You can check beforehand with patch -p1 --dry-run < /path/to/filename.patch.
 
 ## DWL config modifications
 DWL's configuration can be adapted by changing config.h and config.mk files in the ~/.local/src/dwl folder.  Modifying the C-code can be challenging to begin with. My changes and all keybinds are included in dotfiles.tar.
