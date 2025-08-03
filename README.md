@@ -105,7 +105,7 @@ ignore-timeout=1
 This means that notifications dissapear after 10 seconds, but urgent messages remain visible.  The default blue of mako matches well with the overall blue theme in DWL I'm going for anyways.
 
 ## Keyboard hacks for be-latin1 (Belgian AZERTY layout)
-Being Belgian I'm using a be-latin1 AZERTY keyboard layout.  This is always a mess to change tags.  After some fiddling with 'wev' I was able to modify the necessary keys and use SHIFT+& for tag 1, SHIFT+é for tag 2, SHIFT+" for tag 3 etc.
+Being Belgian I'm using a be-latin1 AZERTY keyboard layout.  This is always a mess to change tags.  After some fiddling with 'wev' I was able to modify the necessary keys and use MODKEYT+& for tag 1, MODKEY+é for tag 2, MODKEY+" for tag 3 etc.
 In config.h:
 ```
 /* keyboard */
